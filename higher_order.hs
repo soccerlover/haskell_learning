@@ -8,3 +8,7 @@ compareWithHundred = compare 100
 
 applyTwice :: (a -> a) -> a -> a
 applyTwice f x = f (f x)
+
+mapK :: (a -> b) -> [a] -> [b]
+mapK _ [] = []
+mapK f (x:xs) = f x : mapK f xs
