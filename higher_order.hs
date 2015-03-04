@@ -12,3 +12,6 @@ applyTwice f x = f (f x)
 mapK :: (a -> b) -> [a] -> [b]
 mapK _ [] = []
 mapK f (x:xs) = f x : mapK f xs
+
+sum' :: (Num a) => [a] -> a
+sum' xs = foldl (\acc x -> acc + x) 0 xs
